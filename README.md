@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        connectivity = ConnectionManager(this)
+        connectivity = ConnectionManager.getInstance()
 
         connectivity.listenConnection(owner = this, context = this, listener =  object : OnConnectionChangedListener {
             override fun onConnectionAvailable() {
